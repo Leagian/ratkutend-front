@@ -1,14 +1,34 @@
-const RatsCard = (props) => {
+import { useState, useEffect } from 'react'
+
+const RatsCard = ({rat, setCart}) => {
+  const [panierButtonAdd, setPanierButtonAdd] = useState(true)
+  const addOnCart = e => {
+    setCart(prevState => [...prevState, rat])
+    setPanierButtonAdd(false)
+  }
+
+
+
   return (
     <div className="ratsCard-container">
       <div className="ratsCard-body">
         <div className="rats-front">
-          <img className="rats-img" src={props.image} alt={props.name} />
-          <h3 className="ratsCard-name">{props.name}</h3>
-          <h5 className="ratsCard-prix">{props.prix}</h5>
+          <img className="rats-img" src={rat.image} alt={rat.name} />
+          <h3 className="ratsCard-name">{rat.name}</h3>
+          <h5 className="ratsCard-prix">{rat.prix} €</h5>
         </div>
         <div className="ratsCard-back">
-          <p className="ratsCard-desc">{props.description}</p>
+          <div className="ratsCard-texte">
+          <p className="ratsCard-desc">{rat.description}</p>
+          <div className='ratsCard-cara'>
+          <p>Vitesse : {rat.vitesseTexte}</p>
+          <p>Contagion : {rat.contagionTexte}</p>
+          <p>Menace : {rat.menaceTexte}</p>
+          </div>
+          {panierButtonAdd? 
+          <button onClick={e =>addOnCart(e)}>Add</button> : <button>V</button> 
+        }
+          </div>
         </div>
       </div>
     </div>

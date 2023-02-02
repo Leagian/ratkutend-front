@@ -3,6 +3,7 @@
 @import "./scss/Header.scss";
 @import "./scss/Title.scss";
 @import "./scss/RatsCard.scss";
+@import "./scss/Rats.scss";
 
 @import "./scss/Catalogue.scss";
 @import "./scss/Filter.scss";
@@ -15,6 +16,11 @@
 @font-face {
   font-family: "kawoszeh";
   src: url("./assets/fonts/kawoszeh.ttf");
+}
+
+@font-face {
+  font-family: "medieval";
+  src: url("./assets/fonts/MedievalSharp-Book.ttf");
 }
 
 :root {

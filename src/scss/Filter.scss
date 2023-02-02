@@ -2,14 +2,16 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 3vh;
+  color: var(--second-color);
+  
   }
   .filter-container form {
     display: flex;
     gap: 50px;
+  
   }
   .filter-main {
     cursor: pointer;
   }
-  .filter {
-    
-  }
+  
