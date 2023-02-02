@@ -1,8 +1,4 @@
-.home-global {
-  min-height: 100vh;
-}
-
-.home-header {
-  position: absolute;
-  top: 0;
+.home-title {
+  z-index: 20;
+  position: relative;
 }

@@ -1,10 +1,18 @@
 .title-h1 {
-  padding-top: 6rem;
   padding-left: 9rem;
   padding-bottom: 0;
   font-family: "goudy";
-  font-size: 8rem;
+  font-weight: bold;
+  font-size: 9rem;
   margin-bottom: 0;
+  color: var(--second-color);
+  text-shadow: 3px 3px 2px #0d0f12, 0 0 0.2em orange;
+  transition: 2s;
+
+  &:hover {
+    text-shadow: 3px 3px 2px #0d0f12, 0 0 1em #28c342, 0 0 0.2em #0d0f12;
+    transition: 1.5s;
+  }
 }
 
 .title-para {
@@ -15,7 +23,9 @@
   font-weight: bold;
   word-spacing: 0.3rem;
   letter-spacing: 0.3rem;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  color: var(--second-color);
+  text-shadow: 2px 2px 2px #0d0f12, 0 0 2rem orange, 0 0 0.2em #0d0f12;
 }
 
 .title-letter {

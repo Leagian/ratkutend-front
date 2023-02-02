@@ -30,14 +30,13 @@ const Parallax = () => {
 
   return (
     <>
-      <div className="images-container parallax">
+      <div className="parallax">
         <div className="shadowrat bg-layer parallax-layer" ref={bgRef}></div>
         <div className="ratcontainer fg-layer parallax-layer" ref={fgRef}>
           <img src={RatHome} alt="rat" className="rathome"></img>
         </div>
         <div className="frontcontainer"></div>
       </div>
-      <Title />
     </>
   );
 };

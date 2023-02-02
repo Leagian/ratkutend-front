@@ -4,10 +4,13 @@ import Title from "../components/Title";
 
 const Home = () => {
   return (
-    <div className="home-global">
-      {/* <div className="home-parallax">
+    <div className="images-container home-global">
+      <div className="home-header">
+        <Header />
+      </div>
+      <div className="home-parallax">
         <Parallax />
-      </div> */}
+      </div>
       <div className="home-title">
         <Title />
       </div>
