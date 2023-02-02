@@ -1,10 +1,12 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./screen/Home";
+import Home from "./components/Parallax";
+import Header from "./components/Header";
 
 function App() {
   return (
     <>
       <div className="App">
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>

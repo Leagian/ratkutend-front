@@ -1,11 +1,16 @@
+import Parallax from "../components/Parallax";
 import Header from "../components/Header";
 import Title from "../components/Title";
 
 const Home = () => {
   return (
-    <div>
-      <Header />
-      <Title />
+    <div className="home-global">
+      {/* <div className="home-parallax">
+        <Parallax />
+      </div> */}
+      <div className="home-title">
+        <Title />
+      </div>
     </div>
   );
 };
