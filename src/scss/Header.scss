@@ -1,7 +1,10 @@
 header {
   font-family: "kawoszeh";
-  // height: 5rem;
+  height: 5rem;
   width: 100%;
+  position: relative;
+  z-index: 42;
+  font-weight: bold;
 }
 
 .header-nav {
@@ -23,21 +26,41 @@ header {
   margin-left: 2rem;
   margin-top: 1rem;
 }
+.header-panier {
+  margin: 3.5rem 6rem;
+  height: 6rem;
+  filter: saturate(2.2) drop-shadow(0 0 0.85rem black);
+}
 
 .header-link {
   text-decoration: none;
   padding: 1rem;
   margin-right: 8rem;
-  color: var(--second-color);
+  color: var(--main-color);
   font-size: 1.7rem;
-
-  &:hover {
-    color: var(--third-color);
-  }
+  color: var(--second-color);
+  display: inline-block;
+  position: relative;
+  position: relative;
+  color: var(--second-color);
+  text-shadow: 2px 2px 2px #0d0f12;
 }
 
-.header-panier {
-  display: inline-block;
-  height: 3.5rem;
-  margin: 4rem 2rem;
+.header-link::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--third-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  z-index: 1000;
+}
+.header-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  z-index: 1000;
 }

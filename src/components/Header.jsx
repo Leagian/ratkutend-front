@@ -7,21 +7,23 @@ const Header = () => {
   return (
     <header>
       <nav className="header-nav">
-        <img src={logo} className="header-logo" alt="logo rat" />
+        <Link to="/">
+          <img src={logo} className="header-logo" alt="logo rat" />
+        </Link>
         <ul>
           <li>
             <Link className="header-link" to="/">
-              Home
+              HOME
             </Link>
           </li>
           <li>
             <Link className="header-link" to="/catalogue">
-              Catalogue
+              CATALOGUE
             </Link>
           </li>
         </ul>
         <div>
-          <Link className="header-link" to="/panier">
+          <Link to="/panier">
             <img src={panier} className="header-panier" alt="panier achat" />
           </Link>
         </div>

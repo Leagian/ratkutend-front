@@ -7,6 +7,8 @@
 
 @import "./scss/Catalogue.scss";
 @import "./scss/Filter.scss";
+@import "./scss/Home.scss";
+@import "./scss/Parallax.scss";
 
 @font-face {
   font-family: "goudy";
@@ -28,6 +30,7 @@
   --second-color: #e0e0e0;
   --third-color: #28c342;
 }
+
 
 * {
   box-sizing: border-box;
