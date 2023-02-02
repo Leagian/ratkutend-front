@@ -1,5 +1,3 @@
-import Title from "./Title";
-
 import RatHome from "../assets/images/2500rat.png";
 import { useEffect, useRef } from "react";
 

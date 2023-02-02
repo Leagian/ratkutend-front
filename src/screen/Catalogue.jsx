@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Filter from "../components/Filter";
 import Rats from '../components/Rats'
-import Header from '../components/Header'
+import Header2 from '../components/Header2'
 
 const Catalogue = () => {
     const [rats, setRats] = useState([]);
@@ -49,7 +49,7 @@ useEffect(() => {
     return (
         <div className="catalogue-container" >
           
-            <Header/>
+            <Header2/>
             <Filter rats={rats} setResult = {setResult} setVitesseValue={setVitesseValue} vitesseTexte={vitesseTexte} setMenaceValue={setMenaceValue} menaceTexte={menaceTexte} setContagionValue={setContagionValue} contagionTexte={contagionTexte} vitesseValue={vitesseValue} menaceValue={menaceValue} contagionValue={contagionValue} result={result}/>
             <Rats result = {result}/>
         </div>
