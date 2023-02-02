@@ -2,6 +2,7 @@
 
 @import "./scss/Header.scss";
 @import "./scss/Title.scss";
+@import "./scss/RatsCard.scss";
 
 @font-face {
   font-family: "goudy";
@@ -17,6 +18,10 @@
   --main-color: #0d0f12;
   --second-color: #e0e0e0;
   --third-color: #28c342;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
