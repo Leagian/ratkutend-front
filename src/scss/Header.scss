@@ -25,6 +25,11 @@ header {
   margin-left: 2rem;
   margin-top: 1rem;
 }
+.header-panier {
+  margin: 3.5rem 6rem;
+  height: 6rem;
+  filter: saturate(2.2) drop-shadow(0 0 0.85rem black);
+}
 
 .header-link {
   text-decoration: none;
@@ -37,9 +42,6 @@ header {
   position: relative;
   color: var(--second-color);
   text-shadow: 2px 2px 2px #0d0f12;
-  .header-panier {
-    height: 3.5rem;
-  }
 }
 
 .header-link::after {
