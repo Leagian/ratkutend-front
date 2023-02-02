@@ -1,5 +1,8 @@
 @import "./App.scss";
 @import "./scss/Home.scss";
+@import "./scss/Header.scss";
+@import "./scss/Title.scss";
+@import "./scss/Parallax.scss";
 
 @font-face {
   font-family: "goudy";
@@ -16,9 +19,12 @@
   --second-color: #e0e0e0;
   --third-color: #28c342;
 }
+
+#root {
+  overflow-x: hidden;
+}
+
 * {
-  width: 100vw;
-  height: 100vh;
   box-sizing: border-box;
 }
 
