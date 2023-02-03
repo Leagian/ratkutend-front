@@ -22,7 +22,7 @@ const ModalPaiement = ({ closeModal }) => {
             <input type="text" name="name" placeholder=" Cryptogramme visuel" />
           </div>
           <br />
-          <Link to="#">
+          <Link to="/">
             <button
               className="button-paiement"
               onClick={() => closeModal(false)}

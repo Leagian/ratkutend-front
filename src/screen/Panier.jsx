@@ -8,7 +8,7 @@ const Panier = () => {
   const [panierTotal, setPanierTotal] = useState(0);
 
   useEffect(() => {
-    const items = JSON.parse(localStorage.getItem("cart"));
+    const items = JSON.parse(localStorage.getItem("cartRat"));
 
     if (items) {
       setPanierStorage(items);
@@ -16,9 +16,7 @@ const Panier = () => {
   }, []);
 
   useEffect(() => {
-    setPanierTotal(
-      panierStorage.map((e) => e.price).reduce((a, b) => a + b, 0)
-    );
+    setPanierTotal(panierStorage.map((e) => e.prix).reduce((a, b) => a + b, 0));
   }, [panierStorage]);
 
   useEffect(() => {
@@ -31,8 +29,8 @@ const Panier = () => {
   return (
     <div className="globalpanier">
       <TitlePanier />
-      <PanierSelection />
-      <TotalSelection />
+      <PanierSelection panier={panierStorage} setPanier={setPanierStorage} />
+      <TotalSelection total={panierTotal} />
     </div>
   );
 };
