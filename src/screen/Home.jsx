@@ -1,3 +1,4 @@
+
 import Parallax from "../components/Parallax";
 import Header from "../components/Header";
 import Title from "../components/Title";

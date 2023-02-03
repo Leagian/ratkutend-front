@@ -1,7 +1,12 @@
 @import "./App.scss";
 @import "./scss/Home.scss";
 @import "./scss/Header.scss";
+@import "./scss/Header2.scss";
 @import "./scss/Title.scss";
+@import "./scss/RatsCard.scss";
+@import "./scss/Rats.scss";
+@import "./scss/Catalogue.scss";
+@import "./scss/Filter.scss";
 @import "./scss/Parallax.scss";
 @import "./scss/Panier.scss";
 @import "./scss/TotalSelection.scss";
@@ -19,15 +24,17 @@
   src: url("./assets/fonts/kawoszeh.ttf");
 }
 
+@font-face {
+  font-family: "medieval";
+  src: url("./assets/fonts/MedievalSharp-Book.ttf");
+}
+
 :root {
   --main-color: #0d0f12;
   --second-color: #e0e0e0;
   --third-color: #28c342;
 }
 
-#root {
-  overflow-x: hidden;
-}
 
 * {
   box-sizing: border-box;
@@ -40,6 +47,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {

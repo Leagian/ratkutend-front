@@ -3,9 +3,9 @@ import logo from "../assets/images/logo.png";
 
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header2 = () => {
   return (
-    <header className="header-home">
+    <header className="header-catalogue">
       <nav className="header-nav">
         <Link to="/">
           <img src={logo} className="header-logo" alt="logo rat" />
@@ -32,4 +32,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header2;

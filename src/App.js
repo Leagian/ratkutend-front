@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
+import Catalogue from "./screen/Catalogue";
 import Home from "./screen/Home";
 import Panier from "./screen/Panier";
 
-import PanierSelection from "./components/PanierSelection";
 function App() {
   return (
     <>
@@ -10,7 +10,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/panier" element={<Panier />} />
-          <Route path="/panierSelection" element={<PanierSelection />} />
+
+          <Route path="/catalogue" element={<Catalogue />} />
         </Routes>
       </div>
     </>
