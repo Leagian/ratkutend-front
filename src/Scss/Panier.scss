@@ -1,8 +1,17 @@
-.globalScreen {
-    min-height: 100vh;
+.globalpanier {
+    background: url('../assets/images/ratsky.png') center / cover no-repeat;
+    width: 100vw;
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90vw;
-    margin: auto;
+    justify-content: space-around;
+    font-family: "goudy";
+    font-weight: bold;
+    font-size: 3rem;
+    flex-wrap: wrap;
+}
+
+.title-panier{
+    width: 100%;
+    margin: 0;
+    text-align: center;
 }
