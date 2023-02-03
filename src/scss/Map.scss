@@ -1,0 +1,33 @@
+.test {
+  position: absolute;
+  display: grid;
+  border: solid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 1400px;
+  height: 1064px;
+  z-index: 4;
+  opacity: 0;
+  text-align: center;
+}
+.cellule {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-color: red;
+}
+.mapContainer .map {
+  position: absolute;
+}
+.mapContainer .mapCercle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  clip-path: circle(50% at 50% 50%);
+  animation-name: cercle;
+  animation-duration: 2s;
+}
