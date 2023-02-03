@@ -6,8 +6,8 @@
   grid-template-rows: repeat(10, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  width: 1400px;
-  height: 1064px;
+  width: 1000px;
+  height: 760px;
   z-index: 4;
   opacity: 0;
   text-align: center;
@@ -19,15 +19,59 @@
   grid-row-end: 2;
   background-color: red;
 }
-.mapContainer .map {
+.blocMap .map {
   position: absolute;
+  width: 1000px;
 }
-.mapContainer .mapCercle {
+.blocMap .mapCercle {
   position: absolute;
   width: 50px;
   height: 50px;
-  background-color: red;
   clip-path: circle(50% at 50% 50%);
   animation-name: cercle;
   animation-duration: 2s;
+}
+
+.ratListe {
+  position: absolute;
+  color: white;
+  right: 50px;
+  width: 500px;
+  height: 500px;
+  border: solid white;
+}
+.ratListe li {
+  list-style: none;
+}
+.ratListe img {
+  width: 150px;
+}
+
+.nombreMorts {
+  color: white;
+  position: absolute;
+}
+
+.mapScreen-global {
+  background: linear-gradient(-45deg, #e0e0e0, black, #0d0f12, #28c342);
+  background-size: 400% 400%;
+  animation: gradient 30s ease infinite;
+  height: 115vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.4;
 }

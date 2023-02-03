@@ -8,11 +8,11 @@
 @import "./scss/Catalogue.scss";
 @import "./scss/Filter.scss";
 @import "./scss/Parallax.scss";
-@import "./Scss/Panier.scss";
-@import "./Scss/TotalSelection.scss";
-@import "./Scss/PanierSelection.scss";
-@import "./Scss/PanierSelectionMiniature.scss";
-@import "./Scss/ModalPaiement.scss";
+@import "./scss/Panier.scss";
+@import "./scss/TotalSelection.scss";
+@import "./scss/PanierSelection.scss";
+@import "./scss/PanierSelectionMiniature.scss";
+@import "./scss/ModalPaiement.scss";
 @import "./scss/Map.scss";
 
 @font-face {
@@ -36,9 +36,9 @@
   --third-color: #28c342;
 }
 
-* {
-  box-sizing: border-box;
-}
+// * {
+//   box-sizing: border-box;
+// }
 
 body {
   margin: 0;

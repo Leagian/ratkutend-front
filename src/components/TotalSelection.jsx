@@ -30,7 +30,7 @@ const TotalSelection = ({ total }) => {
             VALIDER MA COMMANDE{" "}
           </button>
           <Link to="/catalogue">
-            <button className="btn-cancelpanier">ANNULER MA COMMANDE</button>
+            <button className="btn-cancelpanier">CONTINUER MES ACHATS</button>
           </Link>
         </div>
       </div>

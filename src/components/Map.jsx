@@ -4,11 +4,24 @@ const Map = () => {
   const [pageX, setPageX] = useState(0);
   const [pageY, setPageY] = useState(0);
   const [nombreMorts, setNombreMorts] = useState(0);
+  const [rats, setRats] = useState([]);
+  const [ratSelected, setRatSelected] = useState([]);
   const mapContainerRef = useRef(null);
 
+  const ratClick = (rat, e) => {
+    setRatSelected(rat);
+    e.target.classList = "disabled";
+  };
+
+  useEffect(() => {
+    const items = JSON.parse(localStorage.getItem("cartRat"));
+
+    if (items) {
+      setRats(items);
+    }
+  }, []);
+
   let random;
-  const ratSelected = { name: "Diateur", stats: 30 };
-  const statsMoyenne = (ratSelected.stats / 10 + getRandomInt(1, 5)) / 4;
 
   function getRandomInt(min, max) {
     return Math.random() * (max - min) + min;
@@ -27,18 +40,18 @@ const Map = () => {
     };
   }, []);
 
-  useEffect(() => {
-    console.log(nombreMorts);
-  }, [nombreMorts]);
   const addElement = (e) => {
+    console.log(ratSelected);
     e.preventDefault();
     random = getRandomInt(1, 5);
     const newImg = document.createElement("img");
-    newImg.src = "http://localhost:4242/Bougri.png";
+    newImg.src = ratSelected.image;
     newImg.classList.add("mapCercle");
     newImg.style.top = `${pageY - 25}px`;
     newImg.style.left = `${pageX - 25}px`;
-    newImg.style.transform = `scale(${statsMoyenne})`;
+    newImg.style.transform = `scale(${
+      (ratSelected.prix / 10 + getRandomInt(1, 5)) / 4
+    })`;
     mapContainerRef.current.appendChild(newImg);
   };
   let dynamicStyles = null;
@@ -64,16 +77,19 @@ const Map = () => {
 
   sections.forEach((section) => {
     section.onclick = function (e) {
-      console.log("nombreHabitants", e.target.textContent);
       setNombreMorts(
         (prevState) =>
-          prevState + parseInt(e.target.textContent) * (statsMoyenne * 5)
+          prevState +
+          Math.floor(
+            e.target.textContent *
+              (parseInt((ratSelected.prix / 10 + getRandomInt(1, 5)) * 5) / 100)
+          )
       );
     };
   });
   return (
     <>
-      <div className="mapContainer" ref={mapContainerRef} onClick={addElement}>
+      <div className="blocMap" ref={mapContainerRef} onClick={addElement}>
         <div className="test">
           <section className="section">0</section>
           <section className="section">200</section>
@@ -182,6 +198,19 @@ const Map = () => {
           src="https://jeanclaudegolvin.com/wp-content/uploads/2018/01/france-carte-chateaux-medievaux-jc-golvin.jpg"
         />
       </div>
+      <ul className="ratListe">
+        {rats.map((rat, i) => (
+          <li key={i}>
+            <img
+              src={rat.image}
+              alt={rat.name}
+              onClick={(e) => ratClick(rat, e)}
+            />
+          </li>
+        ))}
+
+        <li className="nombreMorts">{nombreMorts}</li>
+      </ul>
     </>
   );
 };

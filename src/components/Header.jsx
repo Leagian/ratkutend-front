@@ -21,6 +21,11 @@ const Header = () => {
               CATALOGUE
             </Link>
           </li>
+          <li>
+            <Link className="header-link" to="/map">
+              MAP
+            </Link>
+          </li>
         </ul>
         <div>
           <Link to="/panier">

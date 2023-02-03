@@ -1,6 +1,7 @@
 import PanierSelection from "../components/PanierSelection";
 import TotalSelection from "../components/TotalSelection";
 import Header2 from "../components/Header2";
+import Map from "../components/Map";
 import { useState, useEffect } from "react";
 
 const Panier = () => {
@@ -19,21 +20,15 @@ const Panier = () => {
     setPanierTotal(panierStorage.map((e) => e.prix).reduce((a, b) => a + b, 0));
   }, [panierStorage]);
 
-  useEffect(() => {
-    document.body.classList.add("panier-layout");
-    return () => {
-      document.body.classList.remove("panier-layout");
-    };
-  }, []);
-
   return (
-    <>
-      <div className="globalpanier">
-        <Header2 />
+    <div className="globalpanier">
+      <Header2 />
+      {/* <div className="gradient"></div> */}
+      <div className="selection">
         <PanierSelection panier={panierStorage} setPanier={setPanierStorage} />
         <TotalSelection total={panierTotal} />
       </div>
-    </>
+    </div>
   );
 };
 
