@@ -16,24 +16,25 @@ const Filter = (props) => {
   };
     return (
       <div className="filter-container">
-      <form onSubmit={handleSubmit}>
+      <form className="form" onSubmit={handleSubmit}>
 
-      <label for ="vitesse">Vitesse</label>
+      <label for ="vitesse" className="label-text">Vitesse</label>
         <select
+        className="dropdown"
           name="vitesse"
           onChange={(e) => props.setVitesseValue(e.target.value)}
         >
           <option value="0">---</option>
           {props.vitesseTexte[0]
             ? props.vitesseTexte.map((text, i) => (
-                <option value={i + 1} key={i}>
+                <option  value={i + 1} key={i} >
                   {text.vitesseTexte}
                 </option>
               ))
             : null}
         </select>
-        <label for ="menace">Menace</label>
-        <select name="menace" onChange={(e) => props.setMenaceValue(e.target.value)}>
+        <label  for ="menace" className="label-text">Menace</label>
+        <select className="dropdown" name="menace" onChange={(e) => props.setMenaceValue(e.target.value)}>
           <option value="0">---</option>
           {props.menaceTexte[0]
             ? props.menaceTexte.map((text, i) => (
@@ -43,8 +44,9 @@ const Filter = (props) => {
               ))
             : null}
         </select>
-        <label for ="contagion">Contagion</label>
+        <label  for ="contagion" className="label-text">Contagion</label>
         <select
+        className="dropdown"
           name="contagion"
           onChange={(e) => props.setContagionValue(e.target.value)}
         >
@@ -57,7 +59,7 @@ const Filter = (props) => {
               ))
             : null}
         </select>
-        <button>Rechercher</button>
+        <button className="filter-button">Rechercher</button>
       </form>
   
       

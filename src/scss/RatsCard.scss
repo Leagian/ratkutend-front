@@ -85,3 +85,34 @@ margin: 0%;
   line-height: 1.5rem;
   
 }
+.filter-button {
+  backdrop-filter: blur(7px) saturate(181%);
+  -webkit-backdrop-filter: blur(7px) saturate(181%);
+  background-color: rgba(17, 25, 40, 0.5);
+  border-radius: 12px;
+  color: var(--second-color);
+  border-color: var(--second-color);
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  font-family: "medieval";
+  font-size: 18px;
+  letter-spacing: 0.1rem;
+  // height: 27px;
+}
+label {
+  font-size: 24px;
+  font-family: "medieval";
+  text-shadow: 2px 2px 2px #0d0f12;
+  letter-spacing: 0.15rem;
+}
+.dropdown {
+  height: 20px;
+  margin-top: 4px;
+  width: 15%;
+}
+.form {
+  display: flex;
+  align-items: center;
+}
