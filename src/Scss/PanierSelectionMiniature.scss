@@ -12,8 +12,32 @@
 }
 .selectionMiniature .text{
     display: flex;
-    gap: 150px;
+    gap: 120px;
     align-items: center;
+    text-shadow: 2px 2px 2px #0d0f12;
+    letter-spacing: 0.15rem;
+    box-shadow:  0px 0px 10px 4px #0d0f12;
+    border-radius: 10px;
+    padding: 10px;
+    width: 65%;
+    transition: 1.5s;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.1);
+        transition: 1s;
+    }
+
+    .bourse{
+        width: 50px;
+        height: 50px;
+        margin-left: 10px;
+    }
+
+    .imgrat {
+        border-radius: 10px;
+        box-shadow: 2px 2px 2px black;
+    }
 }
 .selectionMiniature h3{
     text-align: center;
@@ -37,5 +61,12 @@
     padding: 5px;
     width: 200px;
     color: white;
-    letter-spacing: 5px;
+    text-shadow: 2px 2px 2px #0d0f12;
+    letter-spacing: 0.15rem;
+    box-shadow: 2px 2px 2px black;
+    font-family: "medieval";
+    font-size: 1rem;
+    &:active {
+        box-shadow: inset -1px -1px #fff, inset 1px 1px #292929, inset -2px -2px #ffffff, inset 2px 2px rgb(158, 158, 158);
+    }
 }

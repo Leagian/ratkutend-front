@@ -1,9 +1,17 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 const ModalPaiement = ({ closeModal }) => {
+  const hideModal = () => {
+    closeModal(false);
+  };
+
   return (
     <div className="modalpay-container">
       <div className="modalPaiement">
+        <span class="close-button" onClick={hideModal}>
+          &times;
+        </span>
         <h2 className="modaltitle">Remplissez vos informations</h2>
         <form className="description">
           <div className="descmodal">
