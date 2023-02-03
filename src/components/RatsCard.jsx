@@ -15,7 +15,7 @@ const RatsCard = ({rat, setCart}) => {
         <div className="rats-front">
           <img className="rats-img" src={rat.image} alt={rat.name} />
           <h3 className="ratsCard-name">{rat.name}</h3>
-          <h5 className="ratsCard-prix">{rat.prix} €</h5>
+          <h5 className="ratsCard-prix">{rat.prix} écus d'or</h5>
         </div>
         <div className="ratsCard-back">
           <div className="ratsCard-texte">
@@ -26,7 +26,7 @@ const RatsCard = ({rat, setCart}) => {
           <p>Menace : {rat.menaceTexte}</p>
           </div>
           {panierButtonAdd? 
-          <button onClick={e =>addOnCart(e)}>Add</button> : <button>V</button> 
+          <button className='add-button' onClick={e =>addOnCart(e)}>Add</button> : <button>V</button> 
         }
           </div>
         </div>
