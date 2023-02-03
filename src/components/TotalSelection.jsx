@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import ModalPaiement from "./ModalPaiement";
+import bourseOr from "../assets/images/bourseOr.png";
 
 const TotalSelection = ({ total }) => {
   const [openModal, setOpenModal] = useState(false);
@@ -11,8 +12,11 @@ const TotalSelection = ({ total }) => {
         <div className="panier-description">
           <h2 className="title-totalpanier">TOTAL</h2>
 
-          <p className="totalpanier">DE VOTRE COMMANDE </p>
-          <p className="totalpanier">{total} écus d'or</p>
+          <h4 className="totalpanier">DE VOTRE COMMANDE </h4>
+          <h4 className="totalpanier ecus">
+            {total} écus d'or{" "}
+            <img className="bourse" src={bourseOr} alt="bourse d'or"></img>
+          </h4>
         </div>
         <div className="btn-totalcontainer">
           <button

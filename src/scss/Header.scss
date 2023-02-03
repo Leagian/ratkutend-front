@@ -27,16 +27,20 @@
   margin-top: 1rem;
 }
 .header-panier {
-  margin: 3.5rem 6rem;
-  height: 6rem;
-  filter: saturate(2.2) drop-shadow(0 0 0.85rem black);
+  margin: 3rem 6rem;
+  height: 5rem;
+  filter: drop-shadow(.3px .3px 3px white);
+
+  &:hover {
+    filter: drop-shadow(1px 1px 2px white);
+  }
 }
 
 .header-link {
   text-decoration: none;
   padding: 1rem;
   margin-right: 8rem;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   display: inline-block;
   position: relative;
   color: var(--second-color);

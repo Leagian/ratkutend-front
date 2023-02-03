@@ -1,6 +1,6 @@
-import TitlePanier from "../components/TitlePanier";
 import PanierSelection from "../components/PanierSelection";
 import TotalSelection from "../components/TotalSelection";
+import Header2 from "../components/Header2";
 import { useState, useEffect } from "react";
 
 const Panier = () => {
@@ -27,11 +27,13 @@ const Panier = () => {
   }, []);
 
   return (
-    <div className="globalpanier">
-      <TitlePanier />
-      <PanierSelection panier={panierStorage} setPanier={setPanierStorage} />
-      <TotalSelection total={panierTotal} />
-    </div>
+    <>
+      <div className="globalpanier">
+        <Header2 />
+        <PanierSelection panier={panierStorage} setPanier={setPanierStorage} />
+        <TotalSelection total={panierTotal} />
+      </div>
+    </>
   );
 };
 
