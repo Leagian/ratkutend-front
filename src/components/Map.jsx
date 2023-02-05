@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-
+import death from "../assets/images/death.png";
 const Map = () => {
   const [pageX, setPageX] = useState(0);
   const [pageY, setPageY] = useState(0);
@@ -198,6 +198,10 @@ const Map = () => {
           src="https://jeanclaudegolvin.com/wp-content/uploads/2018/01/france-carte-chateaux-medievaux-jc-golvin.jpg"
         />
       </div>
+      <p className="nombreMorts">
+        <img alt="death" src={death} />
+        <span> Vous avez libéré {nombreMorts} âmes</span>
+      </p>
       <ul className="ratListe">
         {rats.map((rat, i) => (
           <li key={i}>
@@ -208,8 +212,6 @@ const Map = () => {
             />
           </li>
         ))}
-
-        <li className="nombreMorts">{nombreMorts}</li>
       </ul>
     </>
   );
